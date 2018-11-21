@@ -1,0 +1,36 @@
+\contentsline {chapter}{Contents}{2}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
+\contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
+\contentsline {chapter}{\numberline {3}Process Collaborations in BPMN}{5}{chapter.3}
+\contentsline {subsubsection}{\nonumberline Private Model}{5}{section*.2}
+\contentsline {subsubsection}{\nonumberline Public Model}{6}{section*.4}
+\contentsline {subsubsection}{\nonumberline Collaboration Model}{6}{section*.6}
+\contentsline {subsubsection}{\nonumberline Choreography Model}{7}{section*.8}
+\contentsline {chapter}{\numberline {4}Conception}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Approach}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Constraining the Collaboration Generation}{9}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Parametric Constraints}{10}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Compliance Constraints}{10}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Random Process Collaboration Generation}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Overall Process Controller}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Generating Random Choreography Models}{12}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Compliance Rules Assignment}{22}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Deriving the Collaboration Models}{28}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Model Translation to BPMN/XML}{30}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Choreography Model}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Collaboration / Public / Private Models}{33}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Conclusion}{36}{section.4.5}
+\contentsline {chapter}{\numberline {5}Implementation}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Internal Process Model Representation}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Class Structure and Data Model}{39}{section.5.2}
+\contentsline {section}{\numberline {5.3}Conclusion}{42}{section.5.3}
+\contentsline {chapter}{\numberline {6}Performance Analysis}{42}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{47}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{48}{section.7.2}
+\contentsline {chapter}{List of Figures}{49}{chapter*.47}
+\contentsline {chapter}{List of Tables}{50}{chapter*.48}
+\contentsline {chapter}{Bibliography}{51}{chapter*.49}
+\contentsline {chapter}{\numberline {A}Appendix}{54}{appendix.A}
+\contentsline {section}{\numberline {A.1}Abstract}{54}{section.A.1}
+\contentsline {section}{\numberline {A.2}Zusammenfassung}{54}{section.A.2}

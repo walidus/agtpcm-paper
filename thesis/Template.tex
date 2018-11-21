@@ -1,0 +1,193 @@
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+%
+%  Global settings, dont change it! (excapt additional \usepackage commands)
+%  Always use PDFLatex!
+%
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+\documentclass[a4paper, 12pt, oneside, BCOR1cm,toc=chapterentrywithdots]{scrbook}
+
+\usepackage{graphicx}           % use for pdfLatex
+\usepackage{makeidx} % f\"{u}r Benutzung des Befehls \printindex
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{tocbibind}
+\usepackage{blindtext}
+\usepackage{subfigure} 
+\usepackage{acronym}
+
+\hypersetup{%
+bookmarksnumbered=true, hyperindex=true,
+%
+%Im Acrobat Reader Subtitel 1. Ebene anzeigen
+bookmarksopen=true, bookmarksopenlevel=1,
+%
+pdfborder=0 0 0 % Keine Box um die Links!
+}
+
+% --------------------------------------------------------------
+% Force Tables and List to be added in Table of Content
+% --------------------------------------------------------------
+
+\renewcommand*{\tableofcontents}{%
+  	\begingroup
+  	\tocsection
+  	\tocfile{\contentsname}{toc}
+  	\endgroup
+}
+\renewcommand*{\listoffigures}{%
+  	\begingroup
+  	\tocsection
+  	\tocfile{\listfigurename}{lof}
+  	\endgroup
+}
+\renewcommand{\listoftables}{
+	\begingroup
+	\tocsection
+	\tocfile{\listtablename}{lot}
+	\endgroup
+}
+\begin{document}
+
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+%
+%  Here starts the userspace !
+%
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+
+%--------titlepage
+\begin{titlepage}
+
+{
+    \begin{center}
+        \raisebox{-1ex}{\includegraphics[scale=0.2]{Logo.png}}\\
+    \end{center}
+    \vspace{1.5cm}
+}
+
+\begin{center}
+
+
+\LARGE{\textbf{MASTERARBEIT}}\\
+\vspace{1.5cm}
+
+\small{Titel}\\
+\Large{\textbf{Automatic Generation and Translation of Process Collaboration Models to BPMN/XML}}\\ 
+\vspace{2cm}
+\small {verfasst von}\\
+\large Frederik Bischoff BSc\\
+\vspace{0.7cm}
+\small angestrebter akademischer Grad\\
+\large Diplom-Ingenieur (Dipl.-Ing.)\\
+\end{center}
+\vspace{3cm}
+\small 
+Wien, 2017\\
+\vspace{2cm}\\
+\begin{tabbing}
+Studienkennzahl lt. Studienblatt: \= \= \= A 066 926\\
+Studienrichtung lt. Studienblatt: \> Masterstudium Wirtschaftsinformatik\\
+Betreut von: \> Univ.-Prof. Dipl.-Math. Dr. Stefanie Rinderle-Ma\\
+\end{tabbing}
+
+\end{titlepage}
+
+
+%---------------------------------------------------------
+% Table of Contents, List of figures, List of Tables
+%---------------------------------------------------------
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%---------------------------------------------------------
+% List of Abbreviations
+%---------------------------------------------------------
+\twocolumn
+\addchap{List of Abbreviations}
+\begin{acronym}[Bash]
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+ \acro{KDE}{K Desktop Environment}
+ \acro{SQL}{Structured Query Language}
+ \acro{Bash}{Bourne-again shell}
+ \acro{JDK}{Java Development Kit}
+ \acro{VM}{Virtuelle Maschine}
+ \acro{I2C}[I²C]{Inter-Integrated Circuit}
+\end{acronym}
+
+\onecolumn
+%---------------------------------------------------------
+% Here starts the real work
+%---------------------------------------------------------
+
+\chapter{Introduction}
+\input{src/intro}  % Load Data from File intro.tex
+
+\chapter{Tables}
+\input{src/example_tables} % Load Data from File example_tables
+
+\chapter{Figures}
+\input{src/example_figures} % Load Data from File example_figures
+
+\chapter{Referencing}
+% Alternativ just write your text under \chapter like this example
+
+\blindtext \cite{autorenrichtlinien}
+
+\blindtext \footnote{Here is an area for your Notes}
+
+\blindtext \footnote{\cite{lnilatex} Seite 11}
+\blindtext \cite{lnilatex}
+\blindtext \cite{autorenrichtlinien}
+
+
+\chapter{Subchapter}
+
+\section{sub 1}
+\blindtext[3]
+\section{sub 2}
+\blindtext[3]
+\subsection{sub 2.1}
+\blindtext[3]
+
+\subsection{sub 2.2}
+\blindtext[3]
+
+%---------------------------------------------------------
+% bibliography based on Springer Design
+%---------------------------------------------------------
+
+\bibliographystyle{splncs03}
+\bibliography{bibliography}
+
+\printindex
+
+\end{document}

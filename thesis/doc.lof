@@ -1,0 +1,39 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Private Model Example\relax }}{5}{figure.caption.3}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Public Model Example\relax }}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Collaboration Model Example\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Choreography Model Example\relax }}{7}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Pyramid of Business Process Model Correctness (Source: \cite {sabrina848})\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Top-Down Approach\relax }}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Model Tracking Component - Concept\relax }}{13}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Model Tracking Component - Data Model\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Refined Process Structure Tree\relax }}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Minimum interactions reserved by remaining gateways\relax }}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Limitation of random branch selection\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Message Flow - Sender/Receiver sequence\relax }}{22}{figure.caption.19}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Compliance Rule Assignment\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Choreography Model\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Public Model - Participant A\relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Public Model - Participant B\relax }}{29}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Public Model - Participant C\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Possible Private Model - Participant A\relax }}{30}{figure.caption.29}
+\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces BPMN/XML Translation Example - Choreography Model\relax }}{32}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces BPMN/XML Translation Example - Collaboration Model\relax }}{34}{figure.caption.34}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Class and interface hierarchy of jBPT (Source: \cite {jbpt})\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Framework Model Representation Structure\relax }}{39}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Class Structure Random Collaboration Generator\relax }}{40}{figure.caption.38}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Class Structure - ChoreographyModelGenerator\relax }}{41}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Class Structure - ComplianceController\relax }}{41}{figure.caption.40}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Choreography model generation duration depending on the number of gateway nodes\relax }}{43}{figure.caption.41}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Choreography model generation duration depending on the max. branching parameter\relax }}{44}{figure.caption.42}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Choreography model generation result depending on the number of compliance rules\relax }}{45}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Choreography model generation result depending on the number of compliance rules\relax }}{46}{figure.caption.44}
+\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Average iterations for successful generation\relax }}{46}{figure.caption.45}
+\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Choreography generation result depending on the number of exclusive gateways and compliance rules\relax }}{47}{figure.caption.46}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

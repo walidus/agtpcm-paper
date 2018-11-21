@@ -1,0 +1,53 @@
+\documentclass[a4paper, 11pt, oneside, BCOR1cm,toc=chapterentrywithdots]{scrbook}
+%\usepackage{algorithm}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\begin{document}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{ 
+\begin{itemize}[label={--}]
+\item set of compliance rule $crList$
+\end{itemize}
+}
+\SetKwProg{Fn}{Function}{}{}
+\SetKw{Continue}{continue}
+\Begin{
+	initialize SplitTracking\;
+	initialize ComplianceController\;
+	initialize ChoreographyModelGenerator\;
+	initialize CollaborationGenerator\;
+	buildSuccess = FALSE;
+	\While{!buildSucess}{
+		model = choreographyModelGenerator.build()\;
+		\eIf{compliance rules are defined}{
+			buildSucess = complianceController.assign()\;
+		}{
+			buildSuccess = TRUE\;
+		}
+		\If{!buildSuccess && iterationCount \mod 10 == 0}{
+			interactionCount = interactionCount * 1.1\;
+		}
+	}
+	choreographyGenerator.generateChoreographyFromModel(model)\;
+}
+\caption{Build Choreography}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\SetKwProg{Fn}{Function}{}{}
+\SetKw{Continue}{continue}
+\Begin{
+	\eIf{compliance	}
+}
+\caption{Build Choreography}
+\end{algorithm}
+
+
+\end{document}

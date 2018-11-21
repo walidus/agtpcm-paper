@@ -1,0 +1,119 @@
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{ 
+\begin{itemize}[label={--}]
+\item set of compliance rule $crList$
+\item set of parametric constraints $params$
+\end{itemize}
+}
+\SetKwProg{Fn}{Function}{}{}
+\SetKw{Continue}{continue}
+\Begin{
+	initialize ComplianceController\;
+	initialize ChoreographyModelGenerator\;
+	initialize CollaborationGenerator\;
+	buildSuccess = \textbf{false}\;
+	\While{!buildSuccess}{
+		$model$ = choreographyModelGenerator.build($params$)\;
+		\eIf{$crList$ \ne empty}{
+			$buildSucess$ = complianceController.assign()\;
+		}{
+			$buildSuccess$ = $true$\;
+		}
+		\If{buildSuccess \ne true \land iterationCount \bmod 10 \equiv 0}{
+			$params$.interactionCount = $params$.interactionCount * 1.1\;
+		}
+	}
+	choreographyGenerator.generateChoreographyFromModel($model$)\;
+}
+\end{algorithm}
+
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+	buildSuccess = FALSE\;
+	\While{buildSuccess \ne TRUE}{
+		build new choreography model\;
+		\eIf{compliance rules are defined}{
+			assign interactions\;
+		}{
+			buildSuccess = TRUE\;
+		}
+	}
+\caption{xxx}
+\label{alg:choreographyController}
+\end{algorithm}
+
+\begin{algorithm}
+    \caption{Algorithm caption}
+    \label{alg:algorithm-label}
+    \begin{algorithmic}
+    	\STATE buildSuccess = FALSE
+        \WHILE{buildSuccess \ne TRUE}
+        	\STATE build new choreography model
+        	\IF{compliance rules are defined}
+        		\STATE {assign compliance rules interactions}
+        		\IF{assignment successful}
+        			\STATE {buildSuccess = TRUE}
+        		\ELSIF{number of build iterations \bmod 10 \equiv 0}
+        			\STATE {increase number of interactions by 10 percent}
+        		\ENDIF
+        	\ELSE
+        		\STATE {buildSuccess = TRUE}
+        	\ENDIF
+        \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\Begin{
+	$possibleNodeTypes \leftarrow$ {}\;
+	\uIf{freeInteractions $>$ 0}{
+		$possibleNodeTypes \leftarrow$ Interaction\;
+	}
+	\uElseIf{remainingParallelGateways $>$ 0}{
+		add ParallelGateway to possibleNodeTypes\;
+	}
+	\If{remainingExclusiveGateways $>$ 0}{
+		add ExclusiveGateway to possibleNodeTypes\;	
+	}
+	\Return random NodeType of possibleNodeTypes\;	
+}
+\caption{getRandomNodeType()}
+\label{alg:randNodeType}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\Begin{
+	$possibleBranches \leftarrow$ all open branches\;
+	\If{freeInteractions $>$ 0}{
+		\Return random branch of $possibleBranches$\;
+	}
+	\If{resInteractionsBranches > 0}{
+		remove all closable branches from $possibleBranches$\;
+		\Return random branch of $possibleBranches$\;
+	}
+	\If{remainingExclusiveGateways $>$ 0}{
+		add ExclusiveGateway to possibleNodeTypes\;	
+	}
+	\Return random NodeType of possibleNodeTypes\;	
+}
+\caption{getRandomBranch(NodeType)}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\Begin{
+	
+}
+\caption{}
+\label{alg:randomNodeType}
+\end{algorithm}

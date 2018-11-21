@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <message id="m1" name="message IA #1"/>
+   <message id="m2" name="message IA #2"/>
+   <message id="m3" name="message IA #3"/>
+   <message id="m4" name="message IA #4"/>
+   <collaboration id="collab1">
+      <participant id="p1" name="Participant A" processRef="pr1"/>
+      <participant id="p2" name="Participant B" processRef="pr2"/>
+      <participant id="p3" name="Participant C" processRef="pr3"/>
+      <messageFlow id="mf1" messageRef="m1" name="" sourceRef="t1" targetRef="t5"/>
+      <messageFlow id="mf2" messageRef="m2" name="" sourceRef="t8" targetRef="t2"/>
+      <messageFlow id="mf3" messageRef="m3" name="" sourceRef="t9" targetRef="t3"/>
+      <messageFlow id="mf4" messageRef="m4" name="" sourceRef="t4" targetRef="pr3"/>
+   </collaboration>
+   <process id="pr1" name="Participant A">
+      <sendTask id="t1" name="Send IA #1">
+         <incoming>sf1</incoming>
+         <outgoing>sf2</outgoing>
+      </sendTask>
+      <startEvent id="e1" name="start">
+         <outgoing>sf1</outgoing>
+      </startEvent>
+      <parallelGateway gatewayDirection="Diverging" id="g1" name="AND1">
+         <incoming>sf2</incoming>
+         <outgoing>sf3</outgoing>
+         <outgoing>sf4</outgoing>
+      </parallelGateway>
+      <receiveTask id="t2" name="Receive IA #2">
+         <incoming>sf3</incoming>
+         <outgoing>sf5</outgoing>
+      </receiveTask>
+      <receiveTask id="t3" name="Receive IA #3">
+         <incoming>sf4</incoming>
+         <outgoing>sf6</outgoing>
+      </receiveTask>
+      <sendTask id="t4" name="Send IA #4">
+         <incoming>sf7</incoming>
+         <outgoing>sf8</outgoing>
+      </sendTask>
+      <parallelGateway gatewayDirection="Converging" id="g2" name="AND1_merge">
+         <incoming>sf5</incoming>
+         <incoming>sf6</incoming>
+         <outgoing>sf7</outgoing>
+      </parallelGateway>
+      <endEvent id="e2" name="end">
+         <incoming>sf8</incoming>
+      </endEvent>
+      <sequenceFlow id="sf1" name="" sourceRef="e1" targetRef="t1"/>
+      <sequenceFlow id="sf2" name="" sourceRef="t1" targetRef="g1"/>
+      <sequenceFlow id="sf3" name="" sourceRef="g1" targetRef="t2"/>
+      <sequenceFlow id="sf4" name="" sourceRef="g1" targetRef="t3"/>
+      <sequenceFlow id="sf5" name="" sourceRef="t2" targetRef="g2"/>
+      <sequenceFlow id="sf6" name="" sourceRef="t3" targetRef="g2"/>
+      <sequenceFlow id="sf7" name="" sourceRef="g2" targetRef="t4"/>
+      <sequenceFlow id="sf8" name="" sourceRef="t4" targetRef="e2"/>
+   </process>
+   <process id="pr2" name="Participant B">
+      <startEvent id="e3" name="start">
+         <outgoing>sf9</outgoing>
+      </startEvent>
+      <receiveTask id="t5" name="Receive IA #1">
+         <incoming>sf9</incoming>
+         <outgoing>sf10</outgoing>
+      </receiveTask>
+      <parallelGateway gatewayDirection="Diverging" id="g3" name="AND1">
+         <incoming>sf10</incoming>
+         <outgoing>sf11</outgoing>
+         <outgoing>sf12</outgoing>
+      </parallelGateway>
+      <task id="t6" name="Private Task #1">
+         <incoming>sf11</incoming>
+         <outgoing>sf13</outgoing>
+      </task>
+      <task id="t7" name="Private Task #2">
+         <incoming>sf12</incoming>
+         <outgoing>sf14</outgoing>
+      </task>
+      <sendTask id="t8" name="Send IA #2">
+         <incoming>sf13</incoming>
+         <outgoing>sf15</outgoing>
+      </sendTask>
+      <sendTask id="t9" name="Send IA #3">
+         <incoming>sf14</incoming>
+         <outgoing>sf16</outgoing>
+      </sendTask>
+      <parallelGateway gatewayDirection="Converging" id="g4" name="AND1_merge">
+         <incoming>sf15</incoming>
+         <incoming>sf16</incoming>
+         <outgoing>sf17</outgoing>
+      </parallelGateway>
+      <endEvent id="e4" name="end">
+         <incoming>sid-92A6946E-5AA5-4C73-88D1-C63DAF56621B</incoming>
+      </endEvent>
+      <sequenceFlow id="sf9" name="" sourceRef="e3" targetRef="t5"/>
+      <sequenceFlow id="sf10" name="" sourceRef="t5" targetRef="g3"/>
+      <sequenceFlow id="sf11" name="" sourceRef="g3" targetRef="t6"/>
+      <sequenceFlow id="sf12" name="" sourceRef="g3" targetRef="t7"/>
+      <sequenceFlow id="sf13" name="" sourceRef="t6" targetRef="t8"/>
+      <sequenceFlow id="sf14" name="" sourceRef="t7" targetRef="t9"/>
+      <sequenceFlow id="sf15" name="" sourceRef="t8" targetRef="g4"/>
+      <sequenceFlow id="sf16" name="" sourceRef="t9" targetRef="g4"/>
+      <sequenceFlow id="sf17" name="" sourceRef="g4" targetRef="e4"/>
+   </process>
+   <process id="pr3" name="Participant C">
+   </process>
+</definitions>

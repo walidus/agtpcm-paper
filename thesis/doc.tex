@@ -1,0 +1,175 @@
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+%
+%  Global settings, dont change it! (excapt additional \usepackage commands)
+%  Always use PDFLatex!
+%
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+\documentclass[a4paper, 11pt, oneside, BCOR1cm,toc=chapterentrywithdots]{scrbook}
+
+\usepackage[pdftex]{graphicx}           % use for pdfLatex
+\usepackage{makeidx} % f\"{u}r Benutzung des Befehls \printindex
+\usepackage[colorlinks=false]{hyperref}
+\usepackage[nottoc]{tocbibind}
+\usepackage{blindtext}
+\usepackage{subfigure} 
+\usepackage{acronym}
+%\usepackage{algorithm}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+%\usepackage{algorithmic}
+%\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage[skip=3pt]{caption}
+\usepackage{pgfplots}
+\usepackage{etoolbox}
+\usepackage{setspace}
+\usepackage[toc,page]{appendix}
+
+\newtheorem{Def}{Definition}[section]
+
+
+\hypersetup{%
+bookmarksnumbered=true, hyperindex=true,
+%
+%Im Acrobat Reader Subtitel 1. Ebene anzeigen
+bookmarksopen=true, bookmarksopenlevel=1,
+%
+pdfborder=0 0 0 % Keine Box um die Links!
+}
+
+% --------------------------------------------------------------
+% Force Tables and List to be added in Table of Content
+% --------------------------------------------------------------
+
+\renewcommand*{\tableofcontents}{%
+  	\begingroup
+  	\tocsection
+  	\tocfile{\contentsname}{toc}
+  	\endgroup
+}
+\renewcommand*{\listoffigures}{%
+  	\begingroup
+  	\tocsection
+  	\tocfile{\listfigurename}{lof}
+  	\endgroup
+}
+\renewcommand{\listoftables}{
+	\begingroup
+	\tocsection
+	\tocfile{\listtablename}{lot}
+	\endgroup
+}
+\begin{document}
+
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+%
+%  Here starts the userspace !
+%
+%--------------------------------------------------------------------------------------%--------------------------------------------------------------------------------------
+
+%--------titlepage
+\begin{titlepage}
+
+{
+    \begin{flushright}
+        \raisebox{-1ex}{\includegraphics[scale=0.15]{Logo.png}}\\
+    \end{flushright}
+    \vspace{1.5cm}
+}
+
+\begin{center}
+\LARGE{\textbf{MASTERARBEIT / MASTER'S THESIS}}\\
+\vspace{1.5cm}
+
+\small{Titel der Masterarbeit / Title of the Master's Thesis}\\
+\Large{\textbf{"Automatic Generation and Translation of Process Collaboration Models to BPMN/XML"}}\\ 
+\vspace{1.5cm}
+\small{verfasst von / submitted by}\\
+\large{Frederik Bischoff BSc }\\
+\vspace{1.5cm}
+\small{angestrebter akademischer Grad / in partial fulfilment of the requirements for the degree of}\\
+\large{Diplom-Ingenieur (Dipl.-Ing.)}\\
+\end{center}
+\vspace{1.25cm}
+\small{Wien, 2018 / Vienna 2018}\\
+\vspace{1.25cm}\\
+\begin{tabbing}
+Studienkennzahl lt. Studienblatt / \hspace{2cm} \= A 066 926\\
+degree programme code as it appears on\\
+the student record sheet:\\[0.5cm]
+Studienrichtung lt. Studienblatt / \> Masterstudium Wirtschaftsinformatik\\
+degree programme as it appears on\\
+the student record sheet:\\[0.5cm]
+Betreut von / Supervisor: \> Univ.-Prof. Dipl.-Math. Dr. Stefanie Rinderle-Ma\\
+\end{tabbing}
+\end{titlepage}
+
+
+%---------------------------------------------------------
+% Table of Contents, List of figures, List of Tables
+%---------------------------------------------------------
+\begin{spacing}{0.95}
+\tableofcontents
+\end{spacing}
+
+%---------------------------------------------------------
+% Here starts the real work
+%---------------------------------------------------------
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\vspace{-0.4cm}
+\chapter{Introduction}
+\input{src/intro}  % Load Data from File intro.tex
+\vspace{-0.4cm}
+\chapter{Related Work}
+\label{chap:relwork}
+\input{src/rel_work}
+\vspace{-0.4cm}
+\chapter{Process Collaborations in BPMN}
+\label{chap:theo}
+\input{src/theo_background}
+\vspace{-0.6cm}
+\chapter{Conception}
+\label{chap:conception}
+\input{src/conception}
+\vspace{-0.5cm}
+\chapter{Implementation}
+\label{chap:impl}
+\input{src/implementation}
+\vspace{-0.5cm}
+\chapter{Performance Analysis}
+\label{chap:analysis}
+\input{src/analysis}
+\vspace{-0.5cm}
+\chapter{Conclusion and Future Work}
+\label{chap:concl}
+\input{src/conclusion}
+\listoffigures
+\listoftables
+\clearpage
+%---------------------------------------------------------
+% bibliography based on Springer Design
+%---------------------------------------------------------
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+\clearpage
+\appendix
+\chapter{Appendix}
+\input{src/appendix}
+
+
+\printindex
+
+\end{document}

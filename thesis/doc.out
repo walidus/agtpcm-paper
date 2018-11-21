@@ -1,0 +1,32 @@
+\BOOKMARK [0][]{chapter*.1}{Contents}{}% 1
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 2
+\BOOKMARK [0][]{chapter.2}{2 Related Work}{}% 3
+\BOOKMARK [0][]{chapter.3}{3 Process Collaborations in BPMN}{}% 4
+\BOOKMARK [0][]{chapter.4}{4 Conception}{}% 5
+\BOOKMARK [1][-]{section.4.1}{4.1 Approach}{chapter.4}% 6
+\BOOKMARK [1][-]{section.4.2}{4.2 Constraining the Collaboration Generation}{chapter.4}% 7
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Parametric Constraints}{section.4.2}% 8
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Compliance Constraints}{section.4.2}% 9
+\BOOKMARK [1][-]{section.4.3}{4.3 Random Process Collaboration Generation}{chapter.4}% 10
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Overall Process Controller}{section.4.3}% 11
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Generating Random Choreography Models}{section.4.3}% 12
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Compliance Rules Assignment}{section.4.3}% 13
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Deriving the Collaboration Models}{section.4.3}% 14
+\BOOKMARK [1][-]{section.4.4}{4.4 Model Translation to BPMN/XML}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Choreography Model}{section.4.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Collaboration / Public / Private Models}{section.4.4}% 17
+\BOOKMARK [1][-]{section.4.5}{4.5 Conclusion}{chapter.4}% 18
+\BOOKMARK [0][]{chapter.5}{5 Implementation}{}% 19
+\BOOKMARK [1][-]{section.5.1}{5.1 Internal Process Model Representation}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{5.2 Class Structure and Data Model}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{5.3 Conclusion}{chapter.5}% 22
+\BOOKMARK [0][]{chapter.6}{6 Performance Analysis}{}% 23
+\BOOKMARK [0][]{chapter.7}{7 Conclusion and Future Work}{}% 24
+\BOOKMARK [1][-]{section.7.1}{7.1 Conclusion}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.2}{7.2 Future Work}{chapter.7}% 26
+\BOOKMARK [0][]{chapter*.47}{List of Figures}{}% 27
+\BOOKMARK [0][]{chapter*.48}{List of Tables}{}% 28
+\BOOKMARK [0][]{chapter*.49}{Bibliography}{}% 29
+\BOOKMARK [0][]{appendix.A}{A Appendix}{}% 30
+\BOOKMARK [1][-]{section.A.1}{A.1 Abstract}{appendix.A}% 31
+\BOOKMARK [1][-]{section.A.2}{A.2 Zusammenfassung}{appendix.A}% 32

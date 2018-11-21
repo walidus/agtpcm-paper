@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{natlang1}
+Fabian Friedrich, Jan Mendling, and Frank Puhlmann.
+\newblock Process model generation from natural language text.
+\newblock In Haralambos Mouratidis and Colette Rolland, editors, {\em Advanced
+  Information Systems Engineering}, pages 482--496, Berlin, Heidelberg, 2011.
+  Springer Berlin Heidelberg.
+
+\bibitem{natlang2}
+Krzysztof Kluza and Krzysztof Honkisz.
+\newblock From sbvr to bpmn and dmn models. proposal of translation from rules
+  to process and decision models.
+\newblock In {\em ICAISC}, 2016.
+
+\bibitem{relUML1}
+D.~Lubke, K.~Schneider, and M.~Weidlich.
+\newblock Visualizing use case sets as bpmn processes.
+\newblock In {\em 2008 Requirements Engineering Visualization}, pages 21--25,
+  Sept 2008.
+
+\bibitem{relUML2}
+Usman Zafar, Moshiur Bhuiyan, P.~W.~C. Prasad, and Farzana Haque.
+\newblock Integration of use case models and {BPMN} using goal- oriented
+  requirements engineering.
+\newblock {\em {JCP}}, 13(2):212--221, 2018.
+
+\bibitem{relUML3}
+Anna Suchenia, Krzysztof Kluza, Krystian Jobczyk, Piotr Wiśniewski, Michal
+  Wypych, and Antoni Ligeza.
+\newblock Supporting bpmn process models with uml sequence diagrams for
+  representing time issues and testing models, 05 2017.
+
+\bibitem{relCP}
+Piotr Wisniewski, Krzysztof Kluza, and Antoni Ligeza.
+\newblock An approach to participatory business process modeling: Bpmn model
+  generation using constraint programming and graph composition.
+\newblock {\em Applied Sciences}, 8(9), 2018.
+
+\bibitem{relPLG}
+Andrea Burattin.
+\newblock {PLG2:} multiperspective process randomization with online and
+  offline simulations.
+\newblock In {\em Proceedings of the {BPM} Demo Track 2016 Co-located with the
+  14th International Conference on Business Process Management {(BPM} 2016),
+  Rio de Janeiro, Brazil, September 21, 2016.}, pages 1--6, 2016.
+
+\bibitem{BPMN20}
+Object Management~Group (OMG).
+\newblock Business process model and notation (bpmn) version 2.0.
+\newblock Technical report, Object Management Group (OMG), January 2011.
+
+\bibitem{sabrina1174}
+Walid Fdhila, Stefanie Rinderle-Ma, David Knuplesch, and Manfred Reichert.
+\newblock Change and compliance in collaborative processes.
+\newblock In {\em 12th IEEE International Conference on Services Computing (SCC
+  2015)}, pages 162--169. IEEE Computer Society Press, June 2015.
+
+\bibitem{sabrina848}
+David Knuplesch, Manfred Reichert, J{\"u}rgen Mangler, Stefanie Rinderle-Ma,
+  and Walid Fdhila.
+\newblock Towards compliance of cross-organizational processes and their
+  changes.
+\newblock In {\em 1st Int Workshop on Security in Business Processes (SBP?12),
+  BPM'12 Workshops}, number 132 in LNBIP, pages 649--661. Springer, September
+  2012.
+
+\bibitem{FDHILA20151}
+Walid Fdhila, Conrad Indiono, Stefanie Rinderle-Ma, and Manfred Reichert.
+\newblock Dealing with change in process choreographies: Design and
+  implementation of propagation algorithms.
+\newblock {\em Information Systems}, 49:1 -- 24, 2015.
+
+\bibitem{Ghose2007}
+Aditya Ghose and George Koliadis.
+\newblock {\em Auditing Business Process Compliance}, pages 169--180.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2007.
+
+\bibitem{GovMilSad:edoc:06:compliance}
+G.~Governatori, Z.~Milosevic, and S.~Sadiq.
+\newblock {Compliance Checking Between Business Processes and Business
+  Contracts}.
+\newblock In {\em 10th International Enterprise Distributed Object Computing
+  Conference (EDOC 2006)}, pages 221--232. IEEE Computing Society, 2006.
+
+\bibitem{sabrina953}
+David Knuplesch, Manfred Reichert, Linh~Thao Ly, Akhil Kumar, and Stefanie
+  Rinderle-Ma.
+\newblock Visual modeling of business process compliance rules with the support
+  of multiple perspectives.
+\newblock In {\em 32nd Int'l Conference on Conceptual Modeling (ER 2013)},
+  number 8217 in LNCS, pages 106--120. Springer, November 2013.
+
+\bibitem{Awad2008}
+Ahmed Awad, Gero Decker, and Mathias Weske.
+\newblock {\em Efficient Compliance Checking Using BPMN-Q and Temporal Logic},
+  pages 326--341.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2008.
+
+\bibitem{compliance_patterns}
+O.~Turetken, A.~Elgammal, W.~J. van~den Heuvel, and M.~P. Papazoglou.
+\newblock Capturing compliance requirements: A pattern-based approach.
+\newblock {\em IEEE Software}, 29(3):28--36, May 2012.
+
+\bibitem{Ramezani2012}
+Elham Ramezani, Dirk Fahland, and Wil M.~P. van~der Aalst.
+\newblock {\em Where Did I Misbehave? Diagnostic Information in Compliance
+  Checking}, pages 262--278.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
+
+\bibitem{rpst}
+Jussi Vanhatalo, Hagen Völzer, and Jana Koehler.
+\newblock The refined process structure tree.
+\newblock {\em Data \& Knowledge Engineering}, 68(9):793 -- 818, 2009.
+\newblock Sixth International Conference on Business Process Management (BPM
+  2008) – Five selected and extended papers.
+
+\bibitem{jbpt}
+Artem Polyvyanyy and Matthias Weidlich.
+\newblock Towards a compendium of process technologies : the jbpt library for
+  process model analysis.
+\newblock In Rebecca Deneckere and Henderick Proper, editors, {\em CAiSE'13
+  Forum at the 25th International Conference on Advanced Information Systems
+  Engineering}, pages 106--113, Valencia, Spain, 2013. Sun SITE Central Europe.
+
+\bibitem{graph_theory}
+Robin~J Wilson.
+\newblock {\em Introduction to Graph Theory}.
+\newblock John Wiley \& Sons, Inc., New York, NY, USA, 1986.
+
+\end{thebibliography}

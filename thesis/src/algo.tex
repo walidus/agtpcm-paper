@@ -1,0 +1,112 @@
+\documentclass[a4paper, 11pt, oneside, BCOR1cm,toc=chapterentrywithdots]{scrbook}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Build Choreography Graph}
+\label{alg2}
+\begin{algorithmic}[1]
+\STATE add main branch %(add split with one branch and start event as split node) erklären init splitTracking (add start event / pseudo split mit einem branch)
+\STATE add start event to main branch
+\WHILE{$remainingInteractions > 0$}
+\STATE start:
+\STATE $selectedNodeTyp \leftarrow getRandomPossibleNodeType()$
+\STATE $nextNode \leftarrow$ new node of $selectedNodeType$
+\STATE $selectedBranch \leftarrow getRandomBranch(selectedNodeType)$
+\STATE $preceedingNode \leftarrow$ last node of $selectedBranch$
+\IF{$currentBranch$ is closable} %(at least one interaction inside)
+\STATE $closeBranch \leftarrow$ random $true/false$
+\IF{$closeBranch$ is $true$}
+\STATE set $currentBranch$ as closed
+\STATE add corresponding merge node
+\STATE goto start;
+\ENDIF 
+\ENDIF
+\STATE add $nextNode$ to $currentBranch$
+\ENDWHILE
+\STATE close all open branches
+\STATE add end event to main branch
+\
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
+
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwData{}
+\KwResult{}
+buildSuccess = \textbf{false}\;
+\While{buildSuccess $\neq$ \textbf{true}}{
+	build new choreography model\;
+	\eIf{compliance rules are defined}{
+		assign interactions\;
+		\uIf{assignment successful}{
+			buildSuccess = \textbf{true}\;
+		}\ElseIf{number of interaction $\bmod$ 10 $\equiv$ 0}{
+			increase number of interactions by factor 1.1\;
+		}
+
+	}{
+		buildSuccess = \textbf{true}\;
+	}
+}
+generate choreography\;
+export models to BPMN\;
+\caption{How to write algorithms}
+\label{alg:choreographyController}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{}
+\SetKwProg{Fn}{Function}{}{}
+\Begin{
+	initialize SplitTracking
+	\While{$remainingInteractions > 0$}{
+		$nextNodeType \leftarrow$ select random possible node type\;
+		$selectedBranch \leftarrow$ select random possible branch\;
+		$preceedingNode \leftarrow$ last node of $selectedBranch$\;
+		\eIf{$selectedBranch$ is closeable}{
+			$closeBranch \leftarrow$ random true/false\;
+			\If{$closeBranch$}{
+				close $selectedBranch$\;
+				\Continue
+			}
+		}{
+			\Switch{$nextNodeType$}{
+				\Case{Interaction}{
+					$nextNode \leftarrow$ new Interaction\;
+					$remainingInteractions - 1$\;
+				}
+				\Case{XorGateway}{
+					$nextNode \leftarrow$ new XorGateway\;
+					$branchCount \leftarrow$ determine random possible branch count\;
+					add split to SplitTracking\;
+					\For{$i = 0;\ i < branchCount;\ i++$}{
+						add new branch to split\;
+					}
+					$remainingXorGateways - 1$\;
+				}
+				\Case{AndGateway}{
+					$nextNode \leftarrow$ new AndGateway\;
+					$branchCount \leftarrow$ determine random possible branch count\;
+					add split to SplitTracking\;
+					\For{$i = 0;\ i < branchCount;\ i++$}{
+						add new branch to split\;
+					}
+					$remainingAndGateways - 1$\;
+				}
+			}
+		}
+	}
+}
+\caption{Add Compliance Rule}
+\end{algorithm}

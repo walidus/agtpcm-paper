@@ -1,0 +1,108 @@
+\documentclass[a4paper, 11pt, oneside, BCOR1cm,toc=chapterentrywithdots]{scrbook}
+%\usepackage{algorithm}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\begin{document}
+
+
+
+set first sender at start split
+
+#rec. function
+addMessageFlow(Split)
+foreach (branch in split.branches) {
+	branch.lastReceiver = set last receiver of branch to first sender of split
+	foreach (node in branch.nodes) {
+		currentSender = branch.lastReceiver // sender must equal to lastReceiver
+		if (node is interaction) {
+			if (interaction is last node of branch) {
+				if (last receiver of split is not yet determined) {
+					interaction.sender = currentSender
+					currentReceiver = set random receiver
+					interaction.receiver = currentReceiver
+					branch.lastReceiver = currentReceiver
+					split.lastReceiver = currentReceiver // set binding lastReceiver for other branches of split
+				} else { // other branch already determined lastReceiver for last interaction of this branch
+					currentReceiver = split.lastReceiver
+					if (currentSender == currentReceiver) { // sender and receiver are the same
+						interaction.sender = currentSender
+						currentReceiver = set random receiver
+						interaction.receiver = currentReceiver
+						branch.lastReceiver = currentReceiver
+						currentSender = branch.lastReceiver
+						currentReceiver = split.lastReceiver
+						
+						interaction = new interaction
+						interaction.sender = currentSender
+						interaction.receiver = currentReceiver
+						add interaction to branch
+						branch.lastReceiver = currentReceiver
+					} else {
+						interaction.sender = currentSender
+						interaction.receiver = currentReceiver
+					}
+				}
+			} else { // not last node
+				interaction.sender = currentSender
+				currentReceiver = set random receiver
+				interaction.receiver = currentReceiver
+				branch.lastReceiver = currentReceiver
+			}
+		} else if (node is gateway) {
+			innerSplit = split of gateway
+			innerSplit.firstSender = branch.lastReceiver // first sender must be the same as branch.lastReceiver
+			addMessageFlow(innerSplit) // recursive call
+ 		} else { // node is merge
+			mergeSplit = corresponding split of merge node
+			branch.lastReceiver = mergeSplit.lastReceiver	
+			if (merge is last node of branch) {
+				if (last receiver of split is not yet determined) {
+					split.lastReceiver = branch.lastReceiver
+				} else {
+					if (branch.lastReceiver <> split.lastReceiver) {
+						currentSender = branch.lastReceiver
+						currentReceiver = split.lastReceiver
+						
+						interaction = new interaction
+						interaction.sender = currentSender
+						interaction.receiver = currentReceiver
+						add interaction to current branch
+						branch.lastReceiver = currentReceiver
+					}
+				}
+			}
+		}
+	}
+}
+
+
+\begin{algorithm}[]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{
+	$interactions \leftarrow$ specified interactions in order\;
+} 
+\SetKwProg{Fn}{Function}{}{}
+\SetKw{Continue}{continue}
+\Begin{
+	\ForEach{ia in interactions}{
+
+	}
+\caption{Oppose Compliance Rules}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\SetKwProg{Fn}{Function}{}{}
+\SetKw{Continue}{continue}
+\Begin{
+	\eIf{compliance	}
+}
+\caption{Build Choreography}
+\end{algorithm}
+
+
+\end{document}

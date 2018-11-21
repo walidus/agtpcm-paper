@@ -1,0 +1,25 @@
+Structure Thesis
+
+1.	Introduction
+1.1 	Motivation
+1.2		The C3Pro Project
+1.3		Aim of Work
+1.4 	Methodology
+2. Theoretical Background
+2.1		Process Collarborations
+2.2		The Different Models / Views
+2.2.1		Choreopraphy Model
+2.2.2		Collaboration Model
+2.2.3		Public Model
+2.2.4		Private Model
+3.	Concept
+3.1 	Automatic Process Generator
+3.1.1		Parameters
+3.1.2		Compliance Rules
+3.1.3		Build Tracking
+3.2		Translation to BPMN/XML		
+3. Implementation
+	
+4. Case Studie
+
+
