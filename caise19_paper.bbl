@@ -1,0 +1,62 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{Awad2008}
+Awad, A., Decker, G., Weske, M.: Efficient Compliance Checking Using BPMN-Q and
+  Temporal Logic, pp. 326--341. Springer Berlin Heidelberg, Berlin, Heidelberg
+  (2008)
+
+\bibitem{FDHILA20151}
+Fdhila, W., Indiono, C., Rinderle-Ma, S., Reichert, M.: Dealing with change in
+  process choreographies: Design and implementation of propagation algorithms.
+  Information Systems  \textbf{49},  1 -- 24 (2015),
+  \url{http://www.sciencedirect.com/science/article/pii/S0306437914001550}
+
+\bibitem{sabrina1174}
+Fdhila, W., Rinderle-Ma, S., Knuplesch, D., Reichert, M.: Change and compliance
+  in collaborative processes. In: 12th IEEE International Conference on
+  Services Computing (SCC 2015). pp. 162--169. IEEE Computer Society Press
+  (June 2015), \url{http://dbis.eprints.uni-ulm.de/1174/}
+
+\bibitem{Ghose2007}
+Ghose, A., Koliadis, G.: Auditing Business Process Compliance, pp. 169--180.
+  Springer Berlin Heidelberg, Berlin, Heidelberg (2007)
+
+\bibitem{GovMilSad:edoc:06:compliance}
+Governatori, G., Milosevic, Z., Sadiq, S.: {Compliance Checking Between
+  Business Processes and Business Contracts}. In: 10th International Enterprise
+  Distributed Object Computing Conference (EDOC 2006). pp. 221--232. IEEE
+  Computing Society (2006)
+
+\bibitem{sabrina953}
+Knuplesch, D., Reichert, M., Ly, L.T., Kumar, A., Rinderle-Ma, S.: Visual
+  modeling of business process compliance rules with the support of multiple
+  perspectives. In: 32nd Int'l Conference on Conceptual Modeling (ER 2013). pp.
+  106--120. No.~8217 in LNCS, Springer (November 2013),
+  \url{http://dbis.eprints.uni-ulm.de/953/}
+
+\bibitem{sabrina848}
+Knuplesch, D., Reichert, M., Mangler, J., Rinderle-Ma, S., Fdhila, W.: Towards
+  compliance of cross-organizational processes and their changes. In: 1st Int
+  Workshop on Security in Business Processes (SBP?12), BPM'12 Workshops. pp.
+  649--661. No.~132 in LNBIP, Springer (September 2012),
+  \url{http://dbis.eprints.uni-ulm.de/848/}
+
+\bibitem{BPMN20}
+(OMG), O.M.G.: Business process model and notation (bpmn) version 2.0. Tech.
+  rep., Object Management Group (OMG) (January 2011),
+  \url{http://www.omg.org/spec/BPMN/2.0}
+
+\bibitem{Ramezani2012}
+Ramezani, E., Fahland, D., van~der Aalst, W.M.P.: Where Did I Misbehave?
+  Diagnostic Information in Compliance Checking, pp. 262--278. Springer Berlin
+  Heidelberg, Berlin, Heidelberg (2012)
+
+\bibitem{compliance_patterns}
+Turetken, O., Elgammal, A., van~den Heuvel, W.J., Papazoglou, M.P.: Capturing
+  compliance requirements: A pattern-based approach. IEEE Software
+  \textbf{29}(3),  28--36 (May 2012)
+
+\end{thebibliography}
